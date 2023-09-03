@@ -5,7 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
 	<div class="info">
@@ -35,13 +38,13 @@
 	  </div>
 	  </div>
 	  
-	  <form class="steps" accept-charset="UTF-8" enctype="multipart/form-data" novalidate="">
+	  <form class="steps" accept-charset="UTF-8"  onSubmit="return false;" novalidate="" action="">
 		<ul id="progressbar">
-		  <li class="active">User Information</li>
-		  <li>Aquisition</li>
-		  <li>Cultivation</li>
-		  <li>Cultivation2</li>
-		  <li>Retention</li>
+		  <li >Email</li>
+		  <li>Registration</li>
+		  <li>Phone Number</li>
+		  <li>Verify Mobile</li>
+		  <li>verified</li>
 		</ul>
 	
 		<!-- USER INFORMATION FIELD SET --> 
@@ -83,113 +86,104 @@
 			<!-- End Total Number of Donors in Year 1 Field -->
 	  
 			<!-- Begin Total Number of Donors in Year 2 Field -->
-			  <div class="form-item webform-component webform-component-textfield hs_total_number_of_donors_in_year_2 field hs-form-field" id="webform-component-acquisition--amount-2">
-			  
-				<label for="edit-submitted-acquisition-amount-2 total_number_of_donors_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">Location</label>
-	  
-				<input id="edit-submitted-acquisition-amount-2" class="form-text hs-input" name="total_number_of_donors_in_year_2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-				<span class="error1" style="display: none;">
-					<i class="error-log fa fa-exclamation-triangle"></i>
-				</span>
-			  </div>
-			  <!-- End Total Number of Donors in Year 2 Field -->
-	  
-			<!-- Begin Calc of Total Number of Donors Fields -->
-			<!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
+            <div class="form-item webform-component webform-component-textfield hs_total_number_of_donors_in_year_2 field hs-form-field" id="webform-component-acquisition--amount-2">
+            
+            <label for="edit-submitted-acquisition-amount-2 total_number_of_donors_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">Location</label>
+    
+            <input id="edit-submitted-acquisition-amount-2" class="form-text hs-input" name="total_number_of_donors_in_year_2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
+            <span class="error1" style="display: none;">
+                <i class="error-log fa fa-exclamation-triangle"></i>
+            </span>
+            </div>
 			 
 			  <!-- End Calc of Total Number of Donors Fields -->
-		  <input type="button" data-page="2" name="previous" class="previous action-button" value="Previous" />
-		  <input type="button" data-page="2" name="next" class="next action-button" value="Next" />
-		  <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
-		</fieldset>
+            <input type="button" data-page="2" name="previous" class="previous action-button" value="Previous" />
+            <input type="button" data-page="2" name="next" class="next action-button" value="Next" />
+            <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
+            </fieldset>
 	  
-		 <!-- Phone Number FIELD SET -->  
-         <fieldset>
-            <h2 class="fs-title">Cultivation and Nurturing your Donors</h2>
-            <h3 class="fs-subtitle">How have you been nurturing donors to get better donations?</h3>
-             
-                <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field" id="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">
+            <!-- Phone Number FIELD SET -->  
+            <fieldset>
+                <h2 class="fs-title">Cultivation and Nurturing your Donors</h2>
+                <h3 class="fs-subtitle">How have you been nurturing donors to get better donations?</h3>
                 
-                  <label for="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">Enter your phone number*</label>
+                    <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field" id="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">
+                    
+                    <label for="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">Enter your phone number*</label>
+            
+                    <input id="edit-submitted-cultivation-amount-1" class="form-text hs-input" name="average_gift_size_in_year_1" required="required" maxlength="10" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number" onkeypress="return /[0-9]/i.test(event.key)"/>
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                    </div>
+                <input type="button" data-page="3" name="previous" class="previous action-button" value="Previous" />
+                <input type="button" data-page="3" name="next" class="next action-button" value="Next" onclick="getNumber()" />
+            
+            </fieldset>
         
-                  <input id="edit-submitted-cultivation-amount-1" class="form-text hs-input" name="average_gift_size_in_year_1" required="required" size="60" maxlength="13" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-                  <span class="error1" style="display: none;">
-                      <i class="error-log fa fa-exclamation-triangle"></i>
-                  </span>
-                </div>
-            <input type="button" data-page="3" name="previous" class="previous action-button" value="Previous" />
-            <input type="button" data-page="3" name="next" class="next action-button" value="Next" onclick="getNumber()" />
-           
-        </fieldset>
-	  
-         <!-- Phone Number verification FIELD SET --> 
-		<fieldset id = "phone_number_verification">
+            <!-- Phone Number verification FIELD SET --> 
+            <fieldset id = "phone_number_verification">
                 <h2 class="fs-title">Verify Mobile</h2>
                 <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field" id="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">
-                    <label for="email-99a6d115-5e68-4355-a7d0-529207feb0b3_2983" id = 'phone-tab'>+91-8447011387</label>
-                    <button>Change</button>
-            </div>
-            
-            <input type="buttobjon" id = "get_OTP"  data-page = "4" name = "otp" class="action-button" value = "GET OTP" onclick="getOTP_page(this)">
-            <input id = "skip_button" type="button" data-page="3" name="next" class="next action-button" value="skip verification" />
+                <label for="email-99a6d115-5e68-4355-a7d0-529207feb0b3_2983" id = 'phone-tab'>+91-8447011387</label>
+                <button>Change</button>
+                </div>
+                <input type="button" id = "get_OTP"  data-page = "4" name = "otp" class="otp-page action-button" value = "GET OTP" onclick="getOTP_page(this)">
+                <input id = "skip_button" type="button" data-page="3" name="next" class="next action-button" value="skip verification" />
+            </fieldset>
 
-            <!-- <input type="button" data-page="4" name="previous" class="previous action-button" value="Previous" />
-            <input type="button" data-page="4" name="next" class="next action-button" value="Next" /> -->
-
-		</fieldset>
-
-		<!-- skip verification FIELD SET --> 
-		<fieldset>
-            <h2 class="fs-title">Are you sure?</h2>
-            <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field" id="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">
-                <label for="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">Teachers may not contact you if you don't verify your phone number</label>
-            </div>
-            </div>
-            <input  type="button" data-page="3" name="skip verification" class="previous action-button" value="skip verification" />
-            <input type="button" data-page="3" name="skip verification" class="next action-button" value="verify now" />
-        </fieldset>
+            <!-- skip verification FIELD SET --> 
+            <fieldset id = "re_varification_page">
+                <h2 class="fs-title">Are you sure?</h2>
+                <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field" id="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">
+                    <label for="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">Teachers may not contact you if you don't verify your phone number</label>
+                </div>
+                </div>
+                <input  type="button" data-page="3" name="skip verification" class="verified action-button" value="skip verification" onclick= "skipVarification()" />
+                <input type="button" data-page="3" name="verify now" class="next action-button" value="verify now" onclick="getOTP_page(this)"/>
+            </fieldset>
         
-        <!-- Enter OTP FIELD SET --> 
-        <fieldset id = "get_OTP_field">
-            <h2 class="fs-title">Enter OTP*</h2>
-            <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field" id="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">
-                <input id="edit-submitted-cultivation-amount-1" class="form-text hs-input" name="average_gift_size_in_year_1" required="required" size="6" maxlength="6" type="text" value="" placeholder="enter OTP here" data-rule-required="true" data-msg-required="Please enter a valid OTP.">
-            </div>
-            <input type="button" data-page="3" name="skip verification" class="previous action-button" value="skip verification" />
-            <input type="button" data-page="3" name="verify now" id = "verify" class="next action-button" value="verify now" onclick="check_OTP()"/>
-        </fieldset>
+            <!-- Enter OTP FIELD SET --> 
+            <fieldset id = "get_OTP_field">
+                <h2 class="fs-title">Enter OTP*</h2>
+                <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field" >
+                    <input id="user_enter_otp" class="form-text hs-input" name="otp_input_filed" required="required" maxlength="6" type="text" value="" placeholder="enter OTP here" data-rule-required="true" data-msg-required="Please enter a valid OTP." onkeypress="return /[0-9]/i.test(event.key)" />
+                    
+                </div>
+                <span id = "wrong_OTP" style="display: block;"></span>
+                <input type="button" data-page="3" name="skip verification" class="previous action-button" value="skip verification"  />
+                <input type="button" data-page="3" name="verify now" id = "verify" class="verify_otp action-button" value="verify now" onclick="otp_varification()" />
+            </fieldset>
 
-        <!-- verified FIELD SET --> 
-        <fieldset>
-            <h2 class="fs-title">verified!</h2>
+            <!-- verified FIELD SET --> 
+            <fieldset id = "varified_page">
+                <h2 class="fs-title">verified!</h2>
+                <div class="row">
+                <div id = "add_extra_sub" class="mt-1 row">
+                <label for="add_extra_subject" class="col-sm-2">Add Subject</label>
+                <input type="text" name = "enter_sub" id = "add_extra_subject" placeholder ="enter subject" class="form-control col-sm-2">
+                <small style="color: rgba(0, 0, 255, 0.784);">If not in option above,add new subject</small>                    
+                </div>
+                <div class="row">
+                <label class = "col">Subjects</label>
+                <select name="subject" id="subjects" placeholder="Please enter subjects" class="form-control">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                </select>
+                </div>
+                <div class="row">
+                <label for="level_input">Level</label>
+                <input type="text" id = "level_input">
+                </div> 
+                </div>
+                <input type="button" name="verify now" id = "submit_form" class="submit action-button" value="Submit" onclick="window.location.reload()" />      
+            </fieldset>
 
-            Subjects <input list="subjects" name="subject" id="subject" placeholder="Please enter subjects">
-            <datalist id="subjects">
-            <option value="english">
-            <option value="hindi">
-            </datalist>
-            
-            <input id = "add_subject" type="button" value="if not in options above , add a new subject" onclick = "add_subject_button()"/>
-            <br>
-            
-            <div id = "add_extra_sub" >
-                Add Subject<input type="text" name = "enter_sub" id = "add_extra_subject" placeholder="enter subject" required>
-                <input type="button" value = "Add" id = "add_ext_sub" onclick = "add_extra_sub_button()"/>                    
-            </div>
-        </fieldset>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
-
-		<script>
-			/* Fundraising Grader
-*
-* Generic Copyright, yadda yadd yadda
-*
-* Plug-ins: jQuery Validate, jQuery 
-* Easing
-*/
+<script>
 
 function getNumber(){
     let phoneno = document.querySelector('#edit-submitted-cultivation-amount-1').value;
@@ -200,30 +194,32 @@ function getNumber(){
     console.log(phonetab.textContent); 
 }
 
-function add_subject_button(){
+var input = document.getElementById("add_extra_subject");
 
-    let id = document.getElementById("add_extra_sub");
-    id.style.display = "block" ; 
-}
-
-function add_extra_sub_button(){
- 
-    let list = document.createElement('option'); 
-    let sub = document.getElementById('add_extra_subject'); 
+input.addEventListener("keypress", function(event) {
+  if (event.keyCode == 13) {
+    let list = document.createElement('option');
+    console.log(list); 
+    let sub = document.getElementById('add_extra_subject');
+    console.log(sub); 
     list.setAttribute("value" , sub.value);
-    let container =  document.getElementById('subjects');
+    list.textContent = sub.value; 
+    console.log(sub.value);
+    console.log(list);
+    let container = document.getElementById('subjects');
+    console.log(container);
     console.log(container);
     container.appendChild(list);
-    let id = document.getElementById("add_extra_sub");
-    id.style.display = "none" ;
+    alert("Subject added"); 
+  }
+});
 
-}
+function skipVarification(){
 
-function generate_OTP(){
-
-    let otp = Math.floor(100000  + Math.random()*900000);
-    console.log(otp);
-    return otp ; 
+    let id = document.getElementById("re_varification_page");
+    let filed = document.getElementById("varified_page");
+    id.style.display = "none";
+    filed.style.display = "block"; 
 }
 
 function getOTP_page(obj){
@@ -232,19 +228,26 @@ function getOTP_page(obj){
     let id = document.getElementById('get_OTP_field');
     let filed = document.getElementById("phone_number_verification"); 
     console.log(filed);
-    let otp = generate_OTP();
+    window.otp = Math.floor(100000  + Math.random()*900000);
     console.log(otp);
     filed.style.display = "none"; 
     id.style.display = "block"; 
 }
 
-function check_OTP(){
+function otp_varification(){
+    
+    let enter_otp = document.getElementById("user_enter_otp");
+    console.log(enter_otp);
+    console.log(window.otp);
 
-    let otp = generate_OTP();
-    let enter_otp = document.getElementById('edit-submitted-cultivation-amount-1');
-    if( otp == enter_otp){
-        let main = document.getElementById('verify');
-        main.classList.add('next' , 'action-button');
+    if( window.otp == enter_otp.value){
+        document.getElementById("varified_page").style.display = "block"; 
+        document.getElementById("get_OTP_field").style.display = "none"; 
+    }else if (window.otp != enter_otp.value){
+        content = document.getElementById("wrong_OTP");
+        console.log(content);
+        content.style.color = "red"; 
+        content.textContent = "Enter OTP is not correct";
     }
 }
 
@@ -388,211 +391,13 @@ $(document).ready(function() {
         });
     });
 });
-jQuery(document).ready(function() {
-    jQuery("#edit-submitted-acquisition-amount-1,#edit-submitted-acquisition-amount-2,#edit-submitted-cultivation-amount-1,#edit-submitted-cultivation-amount-2,#edit-submitted-cultivation-amount-3,#edit-submitted-cultivation-amount-4,#edit-submitted-retention-amount-1,#edit-submitted-retention-amount-2,#edit-submitted-constituent-base-total-constituents").keyup(function() {
-        calcTotal();
-    });
-});
+// jQuery(document).ready(function() {
+//     jQuery("#edit-submitted-acquisition-amount-1,#edit-submitted-acquisition-amount-2,#edit-submitted-cultivation-amount-1,#edit-submitted-cultivation-amount-2,#edit-submitted-cultivation-amount-3,#edit-submitted-cultivation-amount-4,#edit-submitted-retention-amount-1,#edit-submitted-retention-amount-2,#edit-submitted-constituent-base-total-constituents").keyup(function() {
+//         calcTotal();
+//     });
+// });
 
-function calcTotal() {
-    var grade = 0;
-    var donorTotal = Number(jQuery("#edit-submitted-constituent-base-total-constituents").val().replace(/,/g, ""));
-    if (donorTotal) {
-        donorTotal = parseFloat(donorTotal);
-    } else {
-        donorTotal = 0;
-    }
-    grade += getBonusDonorPoints(donorTotal);
-    var acqAmount1 = Number(jQuery("#edit-submitted-acquisition-amount-1").val().replace(/,/g, ""));
-    var acqAmount2 = Number(jQuery("#edit-submitted-acquisition-amount-2").val().replace(/,/g, ""));
-    var acqTotal = 0;
-    if (acqAmount1) {
-        acqAmount1 = parseFloat(acqAmount1);
-    } else {
-        acqAmount1 = 0;
-    }
-    if (acqAmount2) {
-        acqAmount2 = parseFloat(acqAmount2);
-    } else {
-        acqAmount2 = 0;
-    }
-    if (acqAmount1 > 0 && acqAmount2 > 0) {
-        acqTotal = ((acqAmount2 - acqAmount1) / acqAmount1 * 100).toFixed(2);
-    } else {
-        acqTotal = 0;
-    }
-    jQuery("#edit-submitted-acquisition-percent-change").val(acqTotal + '%');
-    grade += getAcquisitionPoints(acqTotal);
-    console.log(grade);
-    var cultAmount1 = Number(jQuery("#edit-submitted-cultivation-amount-1").val().replace(/,/g, ""));
-    var cultAmount2 = Number(jQuery("#edit-submitted-cultivation-amount-2").val().replace(/,/g, ""));
-    var cultTotal = 0;
-    if (cultAmount1) {
-        cultAmount1 = parseFloat(cultAmount1);
-    } else {
-        cultAmount1 = 0;
-    }
-    if (cultAmount2) {
-        cultAmount2 = parseFloat(cultAmount2);
-    } else {
-        cultAmount2 = 0;
-    }
-    if (cultAmount1 > 0 && cultAmount2 > 0) {
-        cultTotal = ((cultAmount2 - cultAmount1) / cultAmount1 * 100).toFixed(2);
-    } else {
-        cultTotal = 0;
-    }
-    jQuery("#edit-submitted-cultivation-percent-change1").val(cultTotal + '%');
-    grade += getAcquisitionPoints(cultTotal);
-    var cultAmount3 = Number(jQuery("#edit-submitted-cultivation-amount-3").val().replace(/,/g, ""));
-    var cultAmount4 = Number(jQuery("#edit-submitted-cultivation-amount-4").val().replace(/,/g, ""));
-    if (cultAmount3) {
-        cultAmount3 = parseFloat(cultAmount3);
-    } else {
-        cultAmount3 = 0;
-    }
-    if (cultAmount4) {
-        cultAmount4 = parseFloat(cultAmount4);
-    } else {
-        cultAmount4 = 0;
-    }
-    if (cultAmount3 > 0 && cultAmount4 > 0) {
-        cultTotal2 = ((cultAmount4 - cultAmount3) / cultAmount3 * 100).toFixed(2);
-    } else {
-        cultTotal2 = 0;
-    }
-    jQuery("#edit-submitted-cultivation-percent-change2").val(cultTotal2 + '%');
-    grade += getAcquisitionPoints(cultTotal2);
-    var retAmount1 = Number(jQuery("#edit-submitted-retention-amount-1").val().replace(/,/g, ""));
-    var retAmount2 = Number(jQuery("#edit-submitted-retention-amount-2").val().replace(/,/g, ""));
-    var retTotal = 0;
-    if (retAmount1) {
-        retAmount1 = parseFloat(retAmount1);
-    } else {
-        retAmount1 = 0;
-    }
-    if (retAmount2) {
-        retAmount2 = parseFloat(retAmount2);
-    } else {
-        retAmount2 = 0;
-    }
-    if (retAmount1 > 0 && retAmount2 > 0) {
-        retTotal = (retAmount2 / retAmount1 * 100).toFixed(2);
-    } else {
-        retTotal = 0;
-    }
-    jQuery("#edit-submitted-retention-percent-change").val(retTotal + '%');
-    grade += getAcquisitionPoints(retTotal);
-    jQuery("#edit-submitted-final-grade-grade").val(grade + ' / 400');
-}
 
-function getAcquisitionPoints(val) {
-    if (val < 1) {
-        return 0;
-    } else if (val >= 1 && val < 6) {
-        return 50;
-    } else if (val >= 6 && val < 11) {
-        return 60;
-    } else if (val >= 11 && val < 16) {
-        return 70;
-    } else if (val >= 16 && val < 21) {
-        return 75;
-    } else if (val >= 21 && val < 26) {
-        return 80;
-    } else if (val >= 26 && val < 31) {
-        return 85;
-    } else if (val >= 31 && val < 36) {
-        return 90;
-    } else if (val >= 36 && val < 41) {
-        return 95;
-    } else if (val >= 41) {
-        return 100;
-    }
-}
-
-function getCultivationGiftPoints(val) {
-    if (val < 1) {
-        return 0;
-    } else if (val >= 1 && val < 4) {
-        return 50;
-    } else if (val >= 4 && val < 7) {
-        return 60;
-    } else if (val >= 7 && val < 10) {
-        return 70;
-    } else if (val >= 10 && val < 13) {
-        return 75;
-    } else if (val >= 13 && val < 16) {
-        return 80;
-    } else if (val >= 16 && val < 21) {
-        return 85;
-    } else if (val >= 21 && val < 26) {
-        return 90;
-    } else if (val >= 26 && val < 51) {
-        return 95;
-    } else if (val >= 51) {
-        return 100;
-    }
-}
-
-function getCultivationDonationPoints(val) {
-    if (val < 1) {
-        return 0;
-    } else if (val >= 1 && val < 6) {
-        return 50;
-    } else if (val >= 6 && val < 11) {
-        return 60;
-    } else if (val >= 11 && val < 16) {
-        return 70;
-    } else if (val >= 16 && val < 21) {
-        return 75;
-    } else if (val >= 21 && val < 26) {
-        return 80;
-    } else if (val >= 26 && val < 31) {
-        return 85;
-    } else if (val >= 31 && val < 36) {
-        return 90;
-    } else if (val >= 36 && val < 41) {
-        return 95;
-    } else if (val >= 41) {
-        return 100;
-    }
-}
-
-function getRetentionPoints(val) {
-    if (val < 1) {
-        return 0;
-    } else if (val >= 1 && val < 51) {
-        return 50;
-    } else if (val >= 51 && val < 56) {
-        return 60;
-    } else if (val >= 56 && val < 61) {
-        return 70;
-    } else if (val >= 61 && val < 66) {
-        return 75;
-    } else if (val >= 66 && val < 71) {
-        return 80;
-    } else if (val >= 71 && val < 76) {
-        return 85;
-    } else if (val >= 76 && val < 81) {
-        return 90;
-    } else if (val >= 81 && val < 91) {
-        return 95;
-    } else if (val >= 91) {
-        return 100;
-    }
-}
-
-function getBonusDonorPoints(val) {
-    if (val < 10001) {
-        return 0;
-    } else if (val >= 10001 && val < 25001) {
-        return 10;
-    } else if (val >= 25001 && val < 50000) {
-        return 15;
-    } else if (val >= 50000) {
-        return 20;
-    }
-}
 var modules = {
     $window: $(window),
     $html: $('html'),
@@ -653,6 +458,6 @@ var modules = {
     }
 }
 modules.init();
-		</script>
+</script>
 </body>
 </html>
